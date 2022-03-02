@@ -22,8 +22,8 @@
       </div>
     </div>
     <div class="topnav">
-      <div>
-        <i class="fa fa-bars" onclick="menubarFunction()" style="float: right;"></i>
+      <div style="margin-bottom:5%">
+        <i class="fa fa-bars" onclick="menubarFunction()" style="right: 5%; position: fixed;"></i>
       </div>
       <div id="links">
         <a href="#summary">Summary</a>
@@ -142,6 +142,7 @@
     // function to open and close menu bar
     function menubarFunction() {
       var x = document.getElementById("links");
+      console.log(x.style.display )
       if (x.style.display === "block") {
         x.style.display = "none";
       } else {

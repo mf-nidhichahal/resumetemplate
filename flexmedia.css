@@ -145,6 +145,9 @@ p.innerp{
   
 .topnav #links {
     display: none;
+    right: 0%;
+    position: fixed;
+    background-color: white;
 }
   
 .topnav a {
@@ -154,6 +157,7 @@ p.innerp{
     font-size: 15px;
     display: block;
   }
+
   
   
   html { scroll-behavior: smooth; } 
