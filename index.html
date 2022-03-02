@@ -8,22 +8,37 @@
   <link rel="stylesheet" href="flexmedia.css">
   <!-- meta tag for responsive -->
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <!-- bosy starting from here -->
 
 <body>
   <div id="main">
+    <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
     <div class="hd-div">
       <div class="heading">
         <h1>Nidhi Chahal</h1>
         <h2>Sr. Software Engineer</h2>
       </div>
     </div>
-    <div id="inner">
-    
+    <div class="topnav">
+      <div>
+        <i class="fa fa-bars" onclick="menubarFunction()" style="float: right;"></i>
+      </div>
+      <div id="links">
+        <a href="#summary">Summary</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#recent_projects">Recent Projects</a>
+        <a href="#language">Language</a>
+        <a href="#interest">Interest</a>
+      </div>
 
+    </div>
+    <div id="inner">
       <div class="bd-div">
-        <div class="heading">
+        <div class="heading" id="summary">
           <h2>Summary</h2>
         </div>
         <div class="text">
@@ -35,7 +50,7 @@
         </div>
       </div>
 
-      <div class="bd-div">
+      <div class="bd-div" id="skills">
         <div class="heading">
           <h2>Skills</h2>
         </div>
@@ -47,7 +62,7 @@
         </div>
       </div>
 
-      <div class="bd-div">
+      <div class="bd-div" id="education">
         <div class="heading">
           <h2>Education</h2>
         </div>
@@ -56,7 +71,7 @@
         </div>
       </div>
 
-      <div class="bd-div">
+      <div class="bd-div" id="experience">
         <div class="heading">
           <h2>Experience</h2>
         </div>
@@ -65,7 +80,7 @@
         </div>
       </div>
 
-      <div class="recent-project-div">
+      <div class="recent-project-div" id="recent_projects">
         <div class="bd-div inner-div">
           <div class="heading">
             <h2>Recent Projects</h2>
@@ -102,7 +117,7 @@
         </div>
       </div>
 
-      <div class="bd-div">
+      <div class="bd-div" id="language">
         <div class="heading">
           <h2>Language</h2>
         </div>
@@ -111,7 +126,7 @@
         </div>
       </div>
 
-      <div class="bd-div">
+      <div class="bd-div" id="interest">
         <div class="heading">
           <h2>Interest</h2>
         </div>
@@ -122,6 +137,38 @@
 
     </div>
   </div>
+  <script>
+
+    // function to open and close menu bar
+    function menubarFunction() {
+      var x = document.getElementById("links");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+
+    // get id of top button
+    var topbutton = document.getElementById("topBtn");
+
+    window.onscroll = function () { scrollFunction() };
+
+    // show top button if screen size is greater then 20
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        topbutton.style.display = "block";
+      } else {
+        topbutton.style.display = "none";
+      }
+    }
+
+    //  to move screen on top
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 </body>
 
 </html>
